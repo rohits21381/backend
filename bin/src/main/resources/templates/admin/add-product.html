@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="admin/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="card py-5 px-5" style="background-color: #655DBB">
+				<h1 class="well text-center ">Add Product Form</h1>
+				<div class="col-lg-12 well">
+					<div class="row">
+						<br>
+						<form th:action="@{/admin/add-product-success}" th:method="post" enctype="multipart/form-data" th:object="${productDto}">
+							<div class="col-sm-12">
+								<div class="row">
+									<div class="col-sm-6 form-group">
+										<label>Product Name</label> <input type="text" name="pName"
+										required="required"	placeholder="Enter Product Name Here.." class="form-control">
+									</div>
+									<br>
+									<div class="col-sm-6 form-group">
+										<label>Product Price</label> <input type="text" name="pPrice" 
+											required="required" placeholder="Enter Product Price Here.." class="form-control">
+									</div>
+									<br>
+									<div class="col-sm-6 form-group">
+										<label>Product category Title </label> <input type="text" name="title" 
+											required="required" placeholder="Enter Product Price Here.." class="form-control">
+									</div>
+								</div>
+								<br>
+								<div class="form-group">
+									<label>Write a product Information</label>
+									<textarea placeholder="Enter product Information Here.."
+										required="required" rows="3" name="inf" class="form-control"></textarea>
+								</div>
+								<br>
+								<div class="mb-3">
+									<label for="formFile" class="form-label">Default file
+										input example</label> <input class="form-control" type="file" th:name="image" accept="image/*"
+										required="required" id="formFile">
+								</div>
+								<br>
+								<button type="submit" class="btn btn-lg btn-info">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

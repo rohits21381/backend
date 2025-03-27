@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<section>
+  <h2>user home page</h2>
+  <h3>userEmail: <span th:text="${user.email}"></span> </h3>
+  <a href="#" th:href="@{/logout}">LogOut</a>
+</section>
+</body>
+</html>

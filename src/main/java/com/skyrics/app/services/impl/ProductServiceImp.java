@@ -56,7 +56,7 @@ public class ProductServiceImp implements  ProductService{
 			categoryDto = this.categoryService.getCategoryByTitle(title);
 		} catch (Exception e) {
 			categoryDto.setTitle(title);
-			categoryService.createCategory(categoryDto);
+			categoryDto = categoryService.createCategory(categoryDto);
 		}
 		Category category = modelMapper.map(categoryDto, Category.class);
 		User user = modelMapper.map(userDto, User.class);

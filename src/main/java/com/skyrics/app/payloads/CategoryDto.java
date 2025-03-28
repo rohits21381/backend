@@ -12,5 +12,5 @@ public class CategoryDto {
 
 	private Integer categoryId;
 	private String title;
-	private String categoryDiscription;
+	
 }
